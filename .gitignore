@@ -489,6 +489,5 @@ $RECYCLE.BIN/
 
 # Certain Silksong Template files
 **/.config/*
-**/.github/*
 **/thunderstore/dist/*
 **/thunderstore/temp/*
