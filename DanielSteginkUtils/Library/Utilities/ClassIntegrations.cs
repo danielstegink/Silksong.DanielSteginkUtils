@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System;
 
-namespace DanielSteginkUtils.Library.Utilities
+namespace DanielSteginkUtils.Utilities
 {
     /// <summary>
     /// Library for methods used to access fields, properties and methods that cannot be accessed conventionally.
