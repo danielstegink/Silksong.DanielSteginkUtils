@@ -11,7 +11,8 @@ namespace DanielSteginkUtils.Utilities
     public static class ClassIntegrations
     {
         /// <summary>
-        /// Gets the value of a field from the given input class.
+        /// Gets the value of a field from the given input class. 
+        /// If the class is static, input should be null.
         /// </summary>
         /// <typeparam name="I"></typeparam>
         /// <typeparam name="O"></typeparam>
@@ -22,18 +23,13 @@ namespace DanielSteginkUtils.Utilities
         public static O GetField<I, O>(I input, string fieldName,
                                         BindingFlags flags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static)
         {
-            if (input == null)
-            {
-                throw new ArgumentNullException("Input cannot be null");
-            }
-
-            FieldInfo fieldInfo = input.GetType()
-                                       .GetField(fieldName, flags);
+            FieldInfo fieldInfo = typeof(I).GetField(fieldName, flags);
             return (O)fieldInfo.GetValue(input);
         }
 
         /// <summary>
-        /// Sets the value of a field from the given input class
+        /// Sets the value of a field from the given input class. 
+        /// If the class is static, input should be null.
         /// </summary>
         /// <typeparam name="I"></typeparam>
         /// <param name="input"></param>
@@ -43,18 +39,13 @@ namespace DanielSteginkUtils.Utilities
         public static void SetField<I>(I input, string fieldName, object value,
                                         BindingFlags flags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static)
         {
-            if (input == null)
-            {
-                throw new ArgumentNullException("Input cannot be null");
-            }
-
-            FieldInfo fieldInfo = input.GetType()
-                                       .GetField(fieldName, flags);
+            FieldInfo fieldInfo = typeof(I).GetField(fieldName, flags);
             fieldInfo.SetValue(input, value);
         }
 
         /// <summary>
-        /// Gets the value of a property from the given input class.
+        /// Gets the value of a property from the given input class. 
+        /// If the class is static, input should be null.
         /// </summary>
         /// <typeparam name="I"></typeparam>
         /// <typeparam name="O"></typeparam>
@@ -65,18 +56,13 @@ namespace DanielSteginkUtils.Utilities
         public static O GetProperty<I, O>(I input, string fieldName,
                                         BindingFlags flags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static)
         {
-            if (input == null)
-            {
-                throw new ArgumentNullException("Input cannot be null");
-            }
-
-            PropertyInfo propertyInfo = input.GetType()
-                                                .GetProperty(fieldName, flags);
+            PropertyInfo propertyInfo = typeof(I).GetProperty(fieldName, flags);
             return (O)propertyInfo.GetValue(input);
         }
 
         /// <summary>
-        /// Sets the value of a property from the given input class.
+        /// Sets the value of a property from the given input class. 
+        /// If the class is static, input should be null.
         /// </summary>
         /// <typeparam name="I"></typeparam>
         /// <param name="input"></param>
@@ -87,18 +73,13 @@ namespace DanielSteginkUtils.Utilities
         public static void SetProperty<I>(I input, string fieldName, object value,
                                         BindingFlags flags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static)
         {
-            if (input == null)
-            {
-                throw new ArgumentNullException("Input cannot be null");
-            }
-
-            PropertyInfo propertyInfo = input.GetType()
-                                                .GetProperty(fieldName, flags);
+            PropertyInfo propertyInfo = typeof(I).GetProperty(fieldName, flags);
             propertyInfo.SetValue(input, value);
         }
 
         /// <summary>
-        /// Calls a function from the given input class
+        /// Calls a function from the given input class. 
+        /// If the class is static, input should be null.
         /// </summary>
         /// <typeparam name="I"></typeparam>
         /// <typeparam name="O"></typeparam>
@@ -110,13 +91,7 @@ namespace DanielSteginkUtils.Utilities
         public static O CallFunction<I, O>(I input, string fieldName, object[] parameters,
                                             BindingFlags flags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static)
         {
-            if (input == null)
-            {
-                throw new ArgumentNullException("Input cannot be null");
-            }
-
-            MethodInfo methodInfo = input.GetType()
-                                            .GetMethod(fieldName, flags);
+            MethodInfo methodInfo = typeof(I).GetMethod(fieldName, flags);
             return (O)methodInfo.Invoke(input, parameters);
         }
     }
