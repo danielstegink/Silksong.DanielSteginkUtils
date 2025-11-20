@@ -38,6 +38,7 @@
     <None Include="../README.md" Pack="True" PackagePath="README.md" />
     <None Include="../thunderstore/icon.png" Pack="True" PackagePath="icon.png" />
     <None Include="../CHANGELOG.md" Link="CHANGELOG.md" />
+    <None Include="..\.github\workflows\build-publish.yml" Link="build-publish.yml" />
     <None Include="..\Directory.Build.props" Link="Directory.Build.props" />
   </ItemGroup>
   <Target Name="CopyAndPackageMod" AfterTargets="PostBuildEvent">
