@@ -1,5 +1,8 @@
 ﻿namespace DanielSteginkUtils.Utilities
 {
+    /// <summary>
+    /// Libray for numeric calculations
+    /// </summary>
     public static class Calculations
     {
         /// <summary>

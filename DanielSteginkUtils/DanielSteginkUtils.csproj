@@ -24,6 +24,13 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>This is a library of custom helpers and logic for Hollow Knight: Silksong mods.</Description>
     <RepositoryUrl>https://github.com/danielstegink/Silksong.DanielSteginkUtils</RepositoryUrl>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>portable</DebugType>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="BepInEx.Analyzers" Version="1.0.8" PrivateAssets="all" />
@@ -33,6 +40,7 @@
     <PackageReference Include="Microsoft.Unity.Analyzers" Version="1.25.0" PrivateAssets="all" />
     <PackageReference Include="UnityEngine.Modules" Version="6000.0.50" IncludeAssets="compile" />
     <PackageReference Include="Silksong.GameLibs" Version="1.1.0-silksong1.0.29315" PrivateAssets="all" />
+    <PackageReference Include="WavLib" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
     <None Include="../README.md" Pack="True" PackagePath="README.md" />
@@ -45,6 +53,7 @@
     <ItemGroup>
       <Binaries Include="$(TargetPath)" LocalDir="/" PackDir="/" />
       <Binaries Include="$(TargetDir)/$(TargetName).pdb" LocalDir="/" PackDir="/" />
+      <Binaries Include="$(TargetDir)/$(TargetName).xml" LocalDir="/" PackDir="/" />
     </ItemGroup>
     <PropertyGroup>
       <ThunderstoreDir>$(ProjectDir)/../thunderstore</ThunderstoreDir>

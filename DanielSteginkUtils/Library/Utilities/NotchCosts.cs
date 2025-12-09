@@ -1,5 +1,8 @@
 ﻿namespace DanielSteginkUtils.Utilities
 {
+    /// <summary>
+    /// Library for storing calculations related to Hollow Knight Notch Costs
+    /// </summary>
     public static class NotchCosts
     {
         #region Nail / Needle

@@ -1,4 +1,9 @@
 # Changelog
+## 2.0.0
+- Added GetAssetBundle, GetAudioClip, DamageEnemy, 
+		GetEnemy, GetTools, EnemyDamageLogger, Components
+- Improved documentation
+- Modified deployment to include XML documentation
 
 ## 1.2.0
 - Added NotchCosts and Calculations

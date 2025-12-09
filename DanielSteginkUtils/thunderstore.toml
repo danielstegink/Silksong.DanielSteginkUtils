@@ -15,7 +15,7 @@ containsNsfwContent = false
 # dependencies are specified in the format AuthorName-PackageName = "version". You should always have at least BepInExPack_Silksong.
 [package.dependencies]
 BepInEx-BepInExPack_Silksong = "5.4.2304"
-
+SFGrenade-WavLib = "1.1.1"
 
 # in most cases you should not change this build block, or the first build.copy block; the dist and tmp directories are used
 # by other build scripts
@@ -32,7 +32,6 @@ target = "/"
 [[build.copy]]
 source = "../CHANGELOG.md"
 target = "/"
-
 
 [publish]
 repository = "https://thunderstore.io"
