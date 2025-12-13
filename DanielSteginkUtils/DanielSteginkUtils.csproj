@@ -48,6 +48,7 @@
     <None Include="../CHANGELOG.md" Link="CHANGELOG.md" />
     <None Include="..\.github\workflows\build-publish.yml" Link="build-publish.yml" />
     <None Include="..\Directory.Build.props" Link="Directory.Build.props" />
+    <None Include="..\thunderstore\thunderstore.toml" Link="thunderstore.toml" />
   </ItemGroup>
   <Target Name="CopyAndPackageMod" AfterTargets="PostBuildEvent">
     <ItemGroup>

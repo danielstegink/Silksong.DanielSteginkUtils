@@ -1,4 +1,10 @@
 # Changelog
+## 2.0.2
+- Fixed TOML to include dependency
+
+## 2.0.1
+- Fixed manifest to include dependency
+
 ## 2.0.0
 - Added GetAssetBundle, GetAudioClip, DamageEnemy, 
 		GetEnemy, GetTools, EnemyDamageLogger, Components
