@@ -5,6 +5,7 @@ A code library containing various helper classes and logic I've accumulated in m
 - ExternalFiles - Utilities for interacting with external files such as AssetBundles
 	- GetAssetBundle - Loads asset bundles
 	- GetAudioClip - Converts audio files in embedded resources to AudioClips
+	- GetSprite - Loads image files in embedded resources to Sprites
 - Helpers - Utilities for implementing common gameplay mechanics
 	- DamageEnemy - Deals damage to an enemy
 	- GetEnemy - Gets nearby enemies

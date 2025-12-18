@@ -1,4 +1,9 @@
 # Changelog
+## 3.0.0
+- Logging fix for GetAudioClip
+- Added GetSprite
+- Changed ClassIntegrations to explicitly allow null inputs
+
 ## 2.0.2
 - Fixed TOML to include dependency
 

@@ -26,7 +26,7 @@ namespace DanielSteginkUtils.ExternalFiles
             Assembly assembly = GetAssembly(assemblyName);
             if (assembly == null)
             {
-                Logging.Log("GetAudioClipFromAssembly", $"Assembly '{assemblyName}' not found");
+                Logging.Log("GetAudioClipFromAssembly", $"Assembly '{assemblyName}' not found", performLogging);
                 return null;
             }
 

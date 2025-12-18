@@ -16,11 +16,13 @@ namespace DanielSteginkUtils.Loggers
         [HarmonyPrefix]
         internal static void Prefix(HealthManager __instance, HitInstance hitInstance)
         {
+#pragma warning disable Harmony003 // Harmony non-ref patch parameters modified
             if (isActive &&
                 hitInstance.Source != null)
             {
                 Logging.Log("EnemyDamageLogger", $"Enemy {__instance.gameObject.name} taking {hitInstance.DamageDealt} damage (Type {hitInstance.AttackType}) from {hitInstance.Source.name}");
             }
+#pragma warning restore Harmony003 // Harmony non-ref patch parameters modified
         }
 
         /// <summary>

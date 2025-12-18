@@ -19,7 +19,7 @@ namespace DanielSteginkUtils.Utilities
         /// <param name="fieldName"></param>
         /// <param name="flags"></param>
         /// <returns></returns>
-        public static O GetField<I, O>(I input, string fieldName,
+        public static O GetField<I, O>(I? input, string fieldName,
                                         BindingFlags flags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static)
         {
             FieldInfo fieldInfo = typeof(I).GetField(fieldName, flags);
@@ -35,7 +35,7 @@ namespace DanielSteginkUtils.Utilities
         /// <param name="fieldName"></param>
         /// <param name="value"></param>
         /// <param name="flags"></param>
-        public static void SetField<I>(I input, string fieldName, object value,
+        public static void SetField<I>(I? input, string fieldName, object value,
                                         BindingFlags flags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static)
         {
             FieldInfo fieldInfo = typeof(I).GetField(fieldName, flags);
@@ -52,7 +52,7 @@ namespace DanielSteginkUtils.Utilities
         /// <param name="fieldName"></param>
         /// <param name="flags"></param>
         /// <returns></returns>
-        public static O GetProperty<I, O>(I input, string fieldName,
+        public static O GetProperty<I, O>(I? input, string fieldName,
                                         BindingFlags flags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static)
         {
             PropertyInfo propertyInfo = typeof(I).GetProperty(fieldName, flags);
@@ -69,7 +69,7 @@ namespace DanielSteginkUtils.Utilities
         /// <param name="value"></param>
         /// <param name="flags"></param>
         /// <returns></returns>
-        public static void SetProperty<I>(I input, string fieldName, object value,
+        public static void SetProperty<I>(I? input, string fieldName, object value,
                                         BindingFlags flags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static)
         {
             PropertyInfo propertyInfo = typeof(I).GetProperty(fieldName, flags);
@@ -87,7 +87,7 @@ namespace DanielSteginkUtils.Utilities
         /// <param name="parameters"></param>
         /// <param name="flags"></param>
         /// <returns></returns>
-        public static O CallFunction<I, O>(I input, string fieldName, object[] parameters,
+        public static O CallFunction<I, O>(I? input, string fieldName, object[] parameters,
                                             BindingFlags flags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static)
         {
             MethodInfo methodInfo = typeof(I).GetMethod(fieldName, flags);
