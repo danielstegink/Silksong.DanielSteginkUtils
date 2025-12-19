@@ -23,7 +23,7 @@ namespace DanielSteginkUtils.ExternalFiles
             Logging.Log("GetAudioClipFromAssembly", $"Getting {fileName} from assembly", performLogging);
 
             // Get the app's assembly
-            Assembly assembly = GetAssembly(assemblyName);
+            Assembly assembly = Assembly.Load(assemblyName);
             if (assembly == null)
             {
                 Logging.Log("GetAudioClipFromAssembly", $"Assembly '{assemblyName}' not found", performLogging);
@@ -58,23 +58,6 @@ namespace DanielSteginkUtils.ExternalFiles
 
                 Logging.Log("GetAudioClipFromAssembly", $"'{fileName}' converted to AudioClip", performLogging);
                 return audioClip;
-            }
-        }
-
-        /// <summary>
-        /// Gets assembly holding embedded resources
-        /// </summary>
-        /// <param name="assemblyName">If blank, will get executing assembly instead</param>
-        /// <returns></returns>
-        private static Assembly GetAssembly(string assemblyName = "")
-        {
-            if (string.IsNullOrEmpty(assemblyName))
-            {
-                return Assembly.GetExecutingAssembly();
-            }
-            else
-            {
-                return Assembly.Load(assemblyName);
             }
         }
     }

@@ -1,4 +1,7 @@
 # Changelog
+## 3.1.1
+- Adjusted internal code to hopefully stop triggering 
+Thunderstore's security filter
 ## 3.1.0
 - Bug fix for EnemyDamageLogger
 
@@ -15,7 +18,7 @@
 
 ## 2.0.0
 - Added GetAssetBundle, GetAudioClip, DamageEnemy, 
-		GetEnemy, GetTools, EnemyDamageLogger, Components
+GetEnemy, GetTools, EnemyDamageLogger, Components
 - Improved documentation
 - Modified deployment to include XML documentation
 
@@ -23,7 +26,8 @@
 - Added NotchCosts and Calculations
 
 ## 1.1.4
-- Modified ClassIntegrations to support static classes (null input)
+- Modified ClassIntegrations to support static classes (null 
+input)
 
 ## 1.1.3
 - Fixed namespace bug

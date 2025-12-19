@@ -22,7 +22,7 @@ namespace DanielSteginkUtils.ExternalFiles
             //SharedData.Log($"Getting local sprite {spriteId}");
             Logging.Log("GetSprite", $"Getting sprite {filePath} in assembly '{assemblyName}'", performLogging);
 
-            Assembly assembly = GetAssembly(assemblyName);
+            Assembly assembly = Assembly.Load(assemblyName);
             if (assembly == null)
             {
                 Logging.Log("GetSprite", $"Assembly '{assemblyName}' not found");
@@ -46,23 +46,6 @@ namespace DanielSteginkUtils.ExternalFiles
                 return Sprite.Create(texture,
                                         new Rect(0, 0, texture.width, texture.height),
                                         new Vector2(0.5f, 0.5f));
-            }
-        }
-
-        /// <summary>
-        /// Gets assembly holding embedded resources
-        /// </summary>
-        /// <param name="assemblyName">If blank, will get executing assembly instead</param>
-        /// <returns></returns>
-        private static Assembly GetAssembly(string assemblyName = "")
-        {
-            if (string.IsNullOrEmpty(assemblyName))
-            {
-                return Assembly.GetExecutingAssembly();
-            }
-            else
-            {
-                return Assembly.Load(assemblyName);
             }
         }
     }
