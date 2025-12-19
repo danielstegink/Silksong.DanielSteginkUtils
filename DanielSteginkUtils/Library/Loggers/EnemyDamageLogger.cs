@@ -20,7 +20,7 @@ namespace DanielSteginkUtils.Loggers
             if (isActive &&
                 hitInstance.Source != null)
             {
-                Logging.Log("EnemyDamageLogger", $"Enemy {__instance.gameObject.name} taking {hitInstance.DamageDealt} damage (Type {hitInstance.AttackType}) from {hitInstance.Source.name}");
+                Logging.Log("EnemyDamageLogger", $"Enemy {__instance.gameObject.name} taking {hitInstance.DamageDealt} damage (Type {hitInstance.AttackType}) from {hitInstance.Source.name}", true);
             }
 #pragma warning restore Harmony003 // Harmony non-ref patch parameters modified
         }

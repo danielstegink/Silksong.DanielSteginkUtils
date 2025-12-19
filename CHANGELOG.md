@@ -1,4 +1,7 @@
 # Changelog
+## 3.1.0
+- Bug fix for EnemyDamageLogger
+
 ## 3.0.0
 - Logging fix for GetAudioClip
 - Added GetSprite

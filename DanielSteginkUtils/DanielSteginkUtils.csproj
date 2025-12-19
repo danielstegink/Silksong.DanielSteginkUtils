@@ -43,12 +43,15 @@
     <PackageReference Include="WavLib" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="../README.md" Pack="True" PackagePath="README.md" />
-    <None Include="../thunderstore/icon.png" Pack="True" PackagePath="icon.png" />
-    <None Include="../CHANGELOG.md" Link="CHANGELOG.md" />
-    <None Include="..\.github\workflows\build-publish.yml" Link="build-publish.yml" />
-    <None Include="..\Directory.Build.props" Link="Directory.Build.props" />
-    <None Include="..\thunderstore\thunderstore.toml" Link="thunderstore.toml" />
+    <None Include="../README.md" Pack="True" PackagePath="README.md" Link="Deployment\README.md" />
+    <None Include="../thunderstore/icon.png" Pack="True" PackagePath="icon.png" Link="Deployment\icon.png" />
+    <None Include="../CHANGELOG.md" Link="Deployment\CHANGELOG.md" />
+    <None Include="..\.github\workflows\build-publish.yml" Link="Deployment\build-publish.yml" />
+    <None Include="..\Directory.Build.props" Link="Deployment\Directory.Build.props" />
+    <None Include="..\thunderstore\thunderstore.toml" Link="Deployment\thunderstore.toml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Deployment\" />
   </ItemGroup>
   <Target Name="CopyAndPackageMod" AfterTargets="PostBuildEvent">
     <ItemGroup>
