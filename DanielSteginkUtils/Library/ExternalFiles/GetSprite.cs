@@ -20,17 +20,18 @@ namespace DanielSteginkUtils.ExternalFiles
         public static Sprite? GetLocalSprite(string filePath, string assemblyName, bool performLogging = false)
         {
             //SharedData.Log($"Getting local sprite {spriteId}");
-            Logging.Log("GetSprite", $"Getting sprite {filePath} in assembly '{assemblyName}'", performLogging);
+            string logPrefix = "GetSprite";
+            Logging.Log(logPrefix, $"Getting sprite {filePath} in assembly '{assemblyName}'", performLogging);
 
             Assembly assembly = Assembly.Load(assemblyName);
             if (assembly == null)
             {
-                Logging.Log("GetSprite", $"Assembly '{assemblyName}' not found");
+                Logging.Log(logPrefix, $"Assembly '{assemblyName}' not found");
                 return null;
             }
 
             string[] resources = assembly.GetManifestResourceNames();
-            Logging.Log("GetSprite", $"All resources found: {string.Join(", ", resources)}", performLogging);
+            Logging.Log(logPrefix, $"All resources found: {string.Join(", ", resources)}", performLogging);
 
             using (Stream stream = assembly.GetManifestResourceStream(filePath))
             {

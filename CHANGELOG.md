@@ -1,4 +1,9 @@
 # Changelog
+## 4.0.0
+- Split code in GetAudioClip to create 
+GetAudioClipFromStream
+- Added new helper class: Needolin
+
 ## 3.1.1
 - Adjusted internal code to hopefully stop triggering 
 Thunderstore's security filter

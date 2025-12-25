@@ -10,6 +10,7 @@ A code library containing various helper classes and logic I've accumulated in m
 	- DamageEnemy - Deals damage to an enemy
 	- GetEnemy - Gets nearby enemies
 	- GetTools - Gets a list of equipped tools
+	- Needolin - Handles changes to the Needolin's sound clip
 - Loggers - Utilities specifically for logging information
 	- EnemyDamagerLogger - Logs when an enemy takes damage. 
 	  Has to be manually enabled via EnemyDamageLogger.Toggle
