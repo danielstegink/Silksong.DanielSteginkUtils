@@ -30,6 +30,20 @@ namespace DanielSteginkUtils.ExternalFiles
                 return null;
             }
 
+            return GetLocalSprite(filePath, assembly, performLogging);
+        }
+
+        /// <summary>
+        /// Gets sprite from embedded resources
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <param name="assembly"></param>
+        /// <param name="performLogging"></param>
+        /// <returns></returns>
+        public static Sprite? GetLocalSprite(string filePath, Assembly assembly, bool performLogging = false)
+        {
+            //SharedData.Log($"Getting local sprite {spriteId}");
+            string logPrefix = "GetSprite";
             string[] resources = assembly.GetManifestResourceNames();
             Logging.Log(logPrefix, $"All resources found: {string.Join(", ", resources)}", performLogging);
 

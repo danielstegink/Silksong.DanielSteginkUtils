@@ -32,11 +32,25 @@ namespace DanielSteginkUtils.ExternalFiles
                 return null;
             }
 
+            return GetAudioClipFromAssembly(assembly, fileName, performLogging);
+        }
+
+        /// <summary>
+        /// Gets a .WAV file from the embedded resources of the given assembly and converts it to an AudioClip
+        /// </summary>
+        /// <param name="assembly">The assembly where the embedded resources are kept</param>
+        /// <param name="fileName">Name of the file (ie. Assembly.Resources.File_Name.wav)</param>
+        /// <param name="performLogging">Whether or not to log the process of getting the file</param>
+        /// <returns></returns>
+        public static AudioClip? GetAudioClipFromAssembly(Assembly assembly, string fileName,
+                                                            bool performLogging = false)
+        {
             // Get file as a resource stream
             using (Stream stream = assembly.GetManifestResourceStream($"{fileName}"))
             {
                 if (stream == null)
                 {
+                    string logPrefix = "GetAudioClipFromAssembly";
                     Logging.Log(logPrefix, $"Embedded resource '{fileName}' not found", performLogging);
                     return null;
                 }
