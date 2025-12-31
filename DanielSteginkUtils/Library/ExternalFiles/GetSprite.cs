@@ -1,4 +1,5 @@
 ﻿using DanielSteginkUtils.Loggers;
+using System;
 using System.IO;
 using System.Reflection;
 using UnityEngine;
@@ -10,6 +11,7 @@ namespace DanielSteginkUtils.ExternalFiles
     /// </summary>
     public static class GetSprite
     {
+        [Obsolete("This method is deprecated. Pass in the Assembly instead.")]
         /// <summary>
         /// Gets sprite from embedded resources
         /// </summary>

@@ -1,4 +1,5 @@
 ﻿using DanielSteginkUtils.Loggers;
+using System;
 using System.IO;
 using System.Reflection;
 using UnityEngine;
@@ -11,6 +12,7 @@ namespace DanielSteginkUtils.ExternalFiles
     /// </summary>
     public static class GetAudioClip
     {
+        [Obsolete("This method is deprecated. Pass in the Assembly instead.")]
         /// <summary>
         /// Gets a .WAV file from the embedded resources of the given assembly and converts it to an AudioClip
         /// </summary>

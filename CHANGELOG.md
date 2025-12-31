@@ -1,4 +1,7 @@
 # Changelog
+# 4.1.1
+- Added Obsolete tags to old methods
+
 ## 4.1.0
 - Added alternate versions of GetAudioClip and GetSprite that take the Assembly as input
 
